@@ -165,7 +165,34 @@ public class signUp2 extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        String rel = (String) comboBox.getSelectedItem();
+        String cate = (String) comboBox2.getSelectedItem();
+        String inc = (String) comboBox3.getSelectedItem();
+        String edu = (String) comboBox4.getSelectedItem();
+        String occ = (String) comboBox5.getSelectedItem();
+        String pan = textPan.getText();
+        String adh = textAdh.getText();
+        String eAccount = " ";
+        if ((r1.isSelected())) {
+            eAccount = "Yes";
+        } else if ((r2.isSelected())) {
+            eAccount = "No";
+        }
 
+        try {
+            if (textPan.getText().equals("") || textAdh.getText().equals("")) {
+                JOptionPane.showMessageDialog(null, "Fill all the Fields");
+            } else {
+                conn c1 = new conn();
+                String q = "insert into SignUpTwo values('" + formNo + "', '" + rel + "','" + cate + "','" + inc + "','"
+                        + edu + "', '" + occ + "','" + pan + "','" + adh + "','" + eAccount + "')";
+                c1.statement.executeUpdate(q);
+                new signUp3(formNo);
+                setVisible(false);
+            }
+        } catch (Exception E) {
+            E.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {

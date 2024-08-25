@@ -229,7 +229,7 @@ public class signUp extends JFrame implements ActionListener {
             martial = "Other";
         }
         String address = textAdd.getText();
-        // String city = textCity.getText();
+        String city = textCity.getText();
         String pin = textPin.getText();
 
         try {
@@ -238,7 +238,7 @@ public class signUp extends JFrame implements ActionListener {
             } else {
                 conn con1 = new conn();
                 String q = "insert into signup values('" + formNo + "','" + name + "', '" + fName + "', '" + DOB + "','"
-                        + gender + "','" + email + "','" + martial + "','" + address + "','" + pin
+                        + gender + "','" + email + "','" + martial + "','" + address + "','" + city + "','" + pin
                         + "')";
                 con1.statement.executeUpdate(q);
                 new signUp2(first);
