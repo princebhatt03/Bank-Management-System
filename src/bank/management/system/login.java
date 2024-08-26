@@ -6,12 +6,7 @@ import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 public class login extends JFrame implements ActionListener {
     JLabel label1, label2, label3;
@@ -111,7 +106,8 @@ public class login extends JFrame implements ActionListener {
                 passwordField1.setText("");
 
             } else if (e.getSource() == button3) {
-                System.out.println("Signed Up");
+                new signUp();
+                setVisible(false);
             }
         } catch (Exception E) {
             E.printStackTrace();

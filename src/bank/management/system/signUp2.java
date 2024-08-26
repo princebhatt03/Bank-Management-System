@@ -14,7 +14,7 @@ public class signUp2 extends JFrame implements ActionListener {
     JButton next;
     String formNo;
 
-    signUp2(String first) {
+    signUp2(String formNO) {
         super("APPLICATION FORM");
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/bank.png"));
@@ -24,7 +24,7 @@ public class signUp2 extends JFrame implements ActionListener {
         image.setBounds(150, 5, 100, 100);
         add(image);
 
-        this.formNo = formNo;
+        this.formNo = formNO;
 
         JLabel l1 = new JLabel("Page 2");
         l1.setFont(new Font("Raleway", Font.BOLD, 22));
@@ -139,13 +139,13 @@ public class signUp2 extends JFrame implements ActionListener {
         buttonGroup.add(r2);
 
         JLabel l11 = new JLabel("Form No. : ");
-        l11.setFont(new Font("Raleway", Font.BOLD, 18));
+        l11.setFont(new Font("Raleway", Font.BOLD, 12));
         l11.setBounds(540, 10, 100, 30);
         add(l11);
 
         JLabel l13 = new JLabel(formNo);
-        l13.setFont(new Font("Raleway", Font.BOLD, 18));
-        l13.setBounds(540, 10, 100, 30);
+        l13.setFont(new Font("Raleway", Font.BOLD, 12));
+        l13.setBounds(600, 10, 100, 30);
         add(l13);
 
         next = new JButton("Next");

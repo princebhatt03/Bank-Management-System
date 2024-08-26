@@ -7,20 +7,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
-import javax.swing.ButtonGroup;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JRadioButton;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 import com.toedter.calendar.JDateChooser;
 
 public class signUp extends JFrame implements ActionListener {
     JRadioButton r1, r2, r3, r4, r5, r6;
-    // public int executeUpdate;
     JTextField textName, textFname, textEmail, textMar, textAdd, textCity, textPin, textState;
     JDateChooser dateChooser;
     JButton next;
@@ -180,16 +172,6 @@ public class signUp extends JFrame implements ActionListener {
         textPin.setBounds(300, 590, 400, 30);
         add(textPin);
 
-        // JLabel labelState = new JLabel("State:");
-        // labelState.setFont(new Font("Raleway", Font.BOLD, 22));
-        // labelState.setBounds(100, 640, 200, 30);
-        // add(labelState);
-
-        // textState = new JTextField();
-        // textState.setFont(new Font("Raleway", Font.BOLD, 14));
-        // textState.setBounds(300, 640, 400, 30);
-        // add(textState);
-
         next = new JButton("Next");
         next.setFont(new Font("Raleway", Font.BOLD, 14));
         next.setBounds(620, 640, 80, 30);
@@ -241,7 +223,7 @@ public class signUp extends JFrame implements ActionListener {
                         + gender + "','" + email + "','" + martial + "','" + address + "','" + city + "','" + pin
                         + "')";
                 con1.statement.executeUpdate(q);
-                new signUp2(first);
+                new signUp2(formNo);
                 setVisible(false);
             }
         } catch (Exception E) {
