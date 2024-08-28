@@ -18,7 +18,7 @@ public class mini extends JFrame implements ActionListener {
         label1.setBounds(20, 100, 450, 450);
         add(label1);
 
-        JLabel label2 = new JLabel("Prince Bhatt");
+        JLabel label2 = new JLabel("Bank of Vidisha");
         label2.setFont(new Font("System", Font.BOLD, 15));
         label2.setBounds(200, 20, 200, 20);
         add(label2);
@@ -35,10 +35,10 @@ public class mini extends JFrame implements ActionListener {
 
         try {
             conn c = new conn();
-            ResultSet resultSet = c.statement.executeQuery("select * from login where pin = '" + pin + "'");
+            ResultSet resultSet = c.statement.executeQuery("select * from login where PIN = '" + pin + "'");
             while (resultSet.next()) {
-                label3.setText("Card Number: " + resultSet.getString("card_number").substring(0, 4) + "XXXXXXXXXXXX"
-                        + resultSet.getString("card_number").substring(12));
+                label3.setText("Card Number: " + resultSet.getString("card_no").substring(0, 4) + "XXXXXXXXXXXX"
+                        + resultSet.getString("card_no").substring(12));
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -22,15 +22,15 @@ public class balanceEnquiry extends JFrame implements ActionListener {
         add(image);
 
         JLabel label1 = new JLabel("Your Current Balance is Rs. ");
-        label1.setFont(new Font("System", Font.BOLD, 16));
+        label1.setFont(new Font("System", Font.BOLD, 28));
         label1.setForeground(Color.WHITE);
         label1.setBounds(430, 160, 400, 35);
         image.add(label1);
 
         label2 = new JLabel();
-        label2.setFont(new Font("System", Font.BOLD, 12));
+        label2.setFont(new Font("System", Font.BOLD, 28));
         label2.setForeground(Color.WHITE);
-        label2.setBounds(430, 190, 400, 35);
+        label2.setBounds(430, 210, 400, 35);
         image.add(label2);
 
         b2 = new JButton("BACK");

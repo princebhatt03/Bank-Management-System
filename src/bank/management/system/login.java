@@ -1,12 +1,9 @@
 package bank.management.system;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Image;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
-
 import javax.swing.*;
 
 public class login extends JFrame implements ActionListener {
@@ -105,7 +102,7 @@ public class login extends JFrame implements ActionListener {
                 conn c = new conn();
                 String cardNO = textField1.getText();
                 String pin = passwordField1.getText();
-                String q = "select * from login where card_number = '" + cardNO + "' and pin = '" + pin + "'";
+                String q = "select * from login where card_no = '" + cardNO + "' and pin = '" + pin + "'";
                 ResultSet resultSet = c.statement.executeQuery(q);
                 if (resultSet.next()) {
                     setVisible(false);
