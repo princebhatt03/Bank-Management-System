@@ -1,7 +1,9 @@
 <h1 align="center">Project Title: Bank Management System</h1>
 <h3 align="center">Clone of Banking and ATM System with real time Cash Withdrawal and Deposit</h3>
 
-- 🔭 GitHub : [Link:](https://github.com/princebhatt03/Bank-Management-System)
+<p>The Bank Management System is a comprehensive software application designed to streamline and automate banking operations. This project provides a secure, efficient, and user-friendly platform for managing customer accounts, transactions, loans, and other banking activities.</p>
+
+- 🔭 GitHub : [Link](https://github.com/princebhatt03/Bank-Management-System)
 
 - 📫 For Any Query **princebhatt316@gmail.com**
 
